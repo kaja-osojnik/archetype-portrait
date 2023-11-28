@@ -13,7 +13,7 @@ function App() {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '80px 0'
+    padding: '40px 0'
     // Add other styles if needed
   };
 
@@ -22,7 +22,7 @@ function App() {
       sx={backgroundStyle}
     >
       <Typography align='center' variant='h1' sx={{fontSize: '40px',
-    marginBottom: '24px'}}>Archetypal Portrait Calculator</Typography>
+    marginBottom: '24px'}}>Archetype Calculator</Typography>
       <TarotCalculator />
     </Box>
   );

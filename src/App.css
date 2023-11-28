@@ -1,18 +1,21 @@
 body{
-  background-image: url('../docs/assets/Artboard11.png');
-  /* background-image: url('../src/assets/bgwaves.jpeg'); */
+  padding: 0;
   background-size: cover;
   justify-content: center;
   background-repeat: no-repeat;
-  font-family: 'Fondamento', cursive;
+  font-family: "txc-pearl", sans-serif!important;
+  color: #1A2E5C;
 }
 
 h1{
-  font-family: 'Fondamento', cursive!important;
+  /* font-family: 'Fondamento', cursive!important; */
+  font-family: "txc-pearl", sans-serif!important;
+
 }
 
 h2{
-  font-family: 'Fondamento', cursive!important;
+  /* font-family: 'Fondamento', cursive!important; */
+  font-family: "txc-pearl", sans-serif!important;
   font-size: 24px!important;
   letter-spacing: -0.5px;
 }
