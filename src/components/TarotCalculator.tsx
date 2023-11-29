@@ -588,7 +588,7 @@ const TarotCalculator: React.FC = () => {
                    
      :
      
-     <div className='m-auto flex cc-center'>
+     <div className='m-auto flex cc vert'>
      <TextField
        // label="Date of Birth"
        type="date"
@@ -604,8 +604,16 @@ const TarotCalculator: React.FC = () => {
        variant="contained"
        onClick={calculateTarot}
        disabled={isCalculateDisabled}
+       sx={{
+       marginTop: '20px', 
+       backgroundColor: '#1a2e5c',
+       width: '200px',
+       padding: '11px 32px',
+       letterSpacing: '1px',
+       borderRadius: '29px'
+      }}
      >
-       Calculate
+       GET PROFILE
      </Button>
      </div>
      

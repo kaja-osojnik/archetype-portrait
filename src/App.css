@@ -20,6 +20,17 @@ h2{
   letter-spacing: -0.5px;
 }
 
+h6{
+  font-family: "txc-pearl", sans-serif!important;
+}
+
+li{
+  font-family: 'Helvetica';
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
 .hide{
   display: none!important;
 }
@@ -71,6 +82,7 @@ ul{
   position: relative;
   perspective: 1000px; /* Adjust this value for different depths */
   cursor: pointer;
+  color: dimgray;
 
   /* Set styles for both faces of the card */
   .card-face {
