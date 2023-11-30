@@ -355,7 +355,6 @@ const TarotCalculator: React.FC = () => {
                     <>
                     <Typography align='center' sx={{fontSize: '28px',
     marginBottom: '24px'}}>Your Core Archetypal Energies:</Typography>
-<Typography align='center' sx={{ fontSize: '28px', marginBottom: '24px' }}>{dob}</Typography>
                      <div className='flex cc'>
                         
 
