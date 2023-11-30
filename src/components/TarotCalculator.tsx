@@ -335,25 +335,7 @@ const TarotCalculator: React.FC = () => {
     };
   };
 
-  // const formatDate = (dateString: string) => {
-  //   const [year, month, day] = dateString.split('-');
-  //   const formattedMonth = new Date(`${month} ${day}, ${year}`).toLocaleString('en-us', {
-  //     month: 'long',
-  //   });
-  //   return `${parseInt(day, 10)} ${formattedMonth} ${year}`;
-  // };
 
-
-  // const formatDate = (dateString: string) => {
-  //   const [year, month, day] = dateString.split('-').map(Number);
-  
-  //   const months = [
-  //     'January', 'February', 'March', 'April', 'May', 'June',
-  //     'July', 'August', 'September', 'October', 'November', 'December'
-  //   ];
-  
-  //   return `${day} ${months[month - 1]} ${year}`;
-  // };
 
   return (
     <div>
@@ -364,7 +346,7 @@ const TarotCalculator: React.FC = () => {
                     <>
                     <Typography align='center' sx={{fontSize: '28px',
     marginBottom: '24px'}}>Your Core Archetypal Energies:</Typography>
-{/* <Typography align='center' sx={{ fontSize: '28px', marginBottom: '24px' }}>{formatDate(dob)}</Typography> */}
+<Typography align='center' sx={{ fontSize: '28px', marginBottom: '24px' }}>{dob}</Typography>
                      <div className='flex cc'>
                         
 
