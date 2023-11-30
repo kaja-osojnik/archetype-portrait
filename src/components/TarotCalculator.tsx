@@ -383,7 +383,7 @@ const TarotCalculator: React.FC = () => {
                             </div>
                           </div>
                         </div>
-                        <Typography align='center'>Personality Light</Typography>
+                        <Typography align='center'>Personality Light </Typography>
                         <Typography align='center' variant='h2'>  {mapToTarotCard(mainPersonalityLight).name}</Typography>
                       </div>
 
