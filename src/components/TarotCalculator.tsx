@@ -335,12 +335,24 @@ const TarotCalculator: React.FC = () => {
     };
   };
 
+  // const formatDate = (dateString: string) => {
+  //   const [year, month, day] = dateString.split('-');
+  //   const formattedMonth = new Date(`${month} ${day}, ${year}`).toLocaleString('en-us', {
+  //     month: 'long',
+  //   });
+  //   return `${parseInt(day, 10)} ${formattedMonth} ${year}`;
+  // };
+
+
   const formatDate = (dateString: string) => {
-    const [year, month, day] = dateString.split('-');
-    const formattedMonth = new Date(`${month} ${day}, ${year}`).toLocaleString('en-us', {
-      month: 'long',
-    });
-    return `${parseInt(day, 10)} ${formattedMonth} ${year}`;
+    const [year, month, day] = dateString.split('-').map(Number);
+  
+    const months = [
+      'January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+  
+    return `${day} ${months[month - 1]} ${year}`;
   };
 
   return (
