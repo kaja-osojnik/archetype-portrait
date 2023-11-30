@@ -22,7 +22,7 @@ function App() {
       sx={backgroundStyle}
     >
       <Typography align='center' variant='h1' sx={{fontSize: '40px',
-    marginBottom: '24px'}}>Archetype Calculator</Typography>
+    marginBottom: '24px'}}>Archetypal Calculator</Typography>
       <TarotCalculator />
     </Box>
   );

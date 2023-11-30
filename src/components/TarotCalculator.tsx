@@ -146,16 +146,18 @@ const TarotCalculator: React.FC = () => {
     
     const calculatedGift = (calculatedA + calculatedB + (3*calculatedM)) > 22 ? (calculatedA + calculatedB + (3*calculatedM)) - 22 : (calculatedA + calculatedB + (3*calculatedM));
     const finalCalculatedGift = calculatedGift > 22 ? calculatedGift - 22 : calculatedGift;
+    const finalFinalCalculatedGift = finalCalculatedGift > 22 ? finalCalculatedGift - 22 : finalCalculatedGift;
 
 
     const calculatedMission = (calculatedA + calculatedB + calculatedM) > 22 ? (calculatedA + calculatedB + calculatedM) -22 : (calculatedA + calculatedB + calculatedM);
     const finalCalculatedMission = calculatedMission > 22 ? calculatedMission - 22 : calculatedMission;
-
+   
 
     console.log('A:' + calculatedA)
     console.log('B:' + calculatedB)
     console.log('MM:' + calculatedM)
     console.log('Super skill:' + calculatedUnconsciousSuperSkill)
+
 
     // Update the state variables with the results
     setMainPersonalityLight(calculatedMainPersonalityLight);
@@ -164,9 +166,10 @@ const TarotCalculator: React.FC = () => {
     setLifetimeLessonExam(calculatedLifetimeLessonExam);
     setSocialExam(finalCalculatedSocialExam);
     setRealisationArea(calculatedRealisationArea);
-    setCalculatedGift(finalCalculatedGift);
+    setCalculatedGift(finalFinalCalculatedGift);
     setcalculatedMission(finalCalculatedMission);
 
+   
 
 
     setIsCalculateDisabled(false);
@@ -194,7 +197,7 @@ const TarotCalculator: React.FC = () => {
     "The Empress":  {
       image: TheEmpress,
       light: ['Femininity', 'Self Love', 'Generosity'],
-      shadow: ['Arrogance', 'Irritability', 'Cheapness'],
+      shadow: ['Arrogance', 'Lack of Self Love', 'Blocked Femininity'],
     },
     "The Emperor": {
       image: TheEmperor,
@@ -203,7 +206,7 @@ const TarotCalculator: React.FC = () => {
     },
     "The Hierophant": {
       image: TheHierophant,
-      light: ['Curious learner', 'Impecaple teacher', 'Respectful'],
+      light: ['Curious learner', 'Impeccable teacher', 'Respectful'],
       shadow: ['Rigid mind', 'Judgemental', 'Impostor syndrome'],
     },
     "The Lovers":  {
@@ -295,7 +298,13 @@ const TarotCalculator: React.FC = () => {
   
 
 
-
+  console.log(mainPersonalityLight)
+  console.log(mainPersonalityShadow)
+  console.log(unconsciousSuperSkill)
+  console.log(lifetimeLessonExam)
+  console.log(socialExam)
+  console.log('gift:' + gift)
+  console.log(mission)
 
   
   const mapToTarotCard = (number: number): { name: string; image: string; light: string[]; shadow: string[] } => {
@@ -429,7 +438,7 @@ const TarotCalculator: React.FC = () => {
                             </div>
                           </div>
                         </div>
-                        <Typography align='center'>Unconscious Super Skill</Typography>
+                        <Typography align='center'>Super Skill</Typography>
                         <Typography align='center' variant='h2'>  {mapToTarotCard(unconsciousSuperSkill).name}</Typography>
                       </div>
 
@@ -464,7 +473,7 @@ const TarotCalculator: React.FC = () => {
                   
                     </div>
 
-                    <Typography align='center' sx={{marginTop: '32px', marginBottom: '32px', marginLeft: 'auto', marginRight: 'auto', maxWidth: '979px'}}>Following Archetypal energies are also part of your portrait, however you may be not aware of them until a certain stage of your life. When Core Archetypes (above) will be mastered, these energies will become more active, present and meaningful for you:</Typography>
+                    <Typography align='center' sx={{marginTop: '32px', marginBottom: '32px', marginLeft: 'auto', marginRight: 'auto', maxWidth: '979px'}}>Following Archetypal energies are also part of your portrait, however you may remain not aware of them until a certain stage of your life:</Typography>
 
                     <div className='flex cc'>
                         <div className='flex cc vert'>
