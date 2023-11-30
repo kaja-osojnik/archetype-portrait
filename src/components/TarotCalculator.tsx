@@ -344,6 +344,17 @@ const TarotCalculator: React.FC = () => {
     };
   };
 
+  const formatDate = (dateString: string) => {
+    const [year, month, day] = dateString.split('-').map(Number);
+  
+    const months = [
+      'January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+  
+    return `${day} ${months[month - 1]} ${year}`;
+  };
+
 
 
   return (
@@ -354,7 +365,9 @@ const TarotCalculator: React.FC = () => {
       {showArchetypes ?
                     <>
                     <Typography align='center' sx={{fontSize: '28px',
-    marginBottom: '24px'}}>Your Core Archetypal Energies:</Typography>
+    marginBottom: '24px'}}>Core Archetypal Energies for:</Typography>|
+<Typography align='center' sx={{ fontSize: '28px', marginBottom: '24px' }}>{formatDate(dob)}</Typography> 
+
                      <div className='flex cc'>
                         
 
