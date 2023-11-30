@@ -95,8 +95,6 @@ ul{
 
   /* Styles for the front face */
   .card-front {
-    /* Set the front face styles like background, border, etc. */
-    /* Ensure the front face is visible by default */
     transform: rotateY(0deg);
   }
 
