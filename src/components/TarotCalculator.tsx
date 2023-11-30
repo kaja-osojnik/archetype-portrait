@@ -365,8 +365,7 @@ const TarotCalculator: React.FC = () => {
       {showArchetypes ?
                     <>
                     <Typography align='center' sx={{fontSize: '28px',
-    marginBottom: '24px'}}>Core Archetypal Energies for:</Typography>|
-<Typography align='center' sx={{ fontSize: '28px', marginBottom: '24px' }}>{formatDate(dob)}</Typography> 
+    marginBottom: '24px'}}>Core Archetypal Energies for: {formatDate(dob)}</Typography>
 
                      <div className='flex cc'>
                         
