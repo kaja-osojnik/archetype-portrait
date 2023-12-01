@@ -141,7 +141,12 @@ const TarotCalculator: React.FC = () => {
     const calculatedMainPersonalityShadow = (calculatedA + calculatedM) > 22 ? calculatedA + calculatedM - 22 : calculatedA + calculatedM;
     const finalCalculatedMainPersonalityShadow = calculatedMainPersonalityShadow > 44 ? calculatedMainPersonalityShadow - 44 : calculatedMainPersonalityShadow;
 
-    const calculatedUnconsciousSuperSkill = (calculatedA + calculatedB + (2 * calculatedM)) % 22 == 0 ? 1 : (calculatedA + calculatedB + (2 * calculatedM)) % 22;
+    
+    // const calculatedUnconsciousSuperSkill = (calculatedA + calculatedB + (2 * calculatedM)) % 22 == 0 ? 1 : (calculatedA + calculatedB + (2 * calculatedM)) % 22;˚ç
+    const calculatedUnconsciousSuperSkill = (calculatedA + calculatedB + (2 * calculatedM)) > 22 ? (calculatedA + calculatedB + (2 * calculatedM)) - 22 : (calculatedA + calculatedB + (2 * calculatedM));
+    const finalCalculatedUnconsciousSuperSkill = calculatedUnconsciousSuperSkill > 22 ? calculatedUnconsciousSuperSkill - 22 : calculatedUnconsciousSuperSkill;
+    
+    
     const calculatedLifetimeLessonExam = calculatedM;
     const calculatedSocialExam = (calculatedB + calculatedM) > 22 ? calculatedB + calculatedM - 22 : calculatedB + calculatedM;
     const finalCalculatedSocialExam = calculatedSocialExam > 22 ? calculatedSocialExam - 22 : calculatedSocialExam;
@@ -161,7 +166,7 @@ const TarotCalculator: React.FC = () => {
     // Update the state variables with the results
     setMainPersonalityLight(calculatedMainPersonalityLight);
     setMainPersonalityShadow(finalCalculatedMainPersonalityShadow);
-    setUnconsciousSuperSkill(calculatedUnconsciousSuperSkill);
+    setUnconsciousSuperSkill(finalCalculatedUnconsciousSuperSkill);
     setLifetimeLessonExam(calculatedLifetimeLessonExam);
     setSocialExam(finalCalculatedSocialExam);
     setRealisationArea(calculatedRealisationArea);
@@ -299,7 +304,7 @@ const TarotCalculator: React.FC = () => {
 
   console.log(mainPersonalityLight)
   console.log(mainPersonalityShadow)
-  console.log(unconsciousSuperSkill)
+  console.log('super skill:' + unconsciousSuperSkill)
   console.log(lifetimeLessonExam)
   console.log(socialExam)
   console.log('gift:' + gift)
