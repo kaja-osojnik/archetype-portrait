@@ -1,7 +1,11 @@
 // TarotCalculator.tsx
 
 import React, { useState } from 'react';
-import { TextField, Button, Typography } from '@mui/material';
+import { TextField, Button, Typography, Link } from '@mui/material';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import MailIcon from '@mui/icons-material/Mail';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 import Death from '../assets/Death.png';
 import Judgement from '../assets/Judgement.png';
@@ -152,11 +156,6 @@ const TarotCalculator: React.FC = () => {
     const calculatedMission = (calculatedA + calculatedB + calculatedM) > 22 ? (calculatedA + calculatedB + calculatedM) -22 : (calculatedA + calculatedB + calculatedM);
     const finalCalculatedMission = calculatedMission > 22 ? calculatedMission - 22 : calculatedMission;
    
-
-    console.log('A:' + calculatedA)
-    console.log('B:' + calculatedB)
-    console.log('MM:' + calculatedM)
-    console.log('Super skill:' + calculatedUnconsciousSuperSkill)
 
 
     // Update the state variables with the results
@@ -364,8 +363,22 @@ const TarotCalculator: React.FC = () => {
 
       {showArchetypes ?
                     <>
-                    <Typography align='center' sx={{fontSize: '28px',
-    marginBottom: '24px'}}>Core Archetypal Energies for: {formatDate(dob)}</Typography>
+                      <Typography       
+                      onClick={() => {setShowArchetypes(false)}}
+                      sx={{
+                        marginTop: '0', 
+                        cursor: 'pointer',
+                        width: 'auto',
+                        padding: '11px 32px',
+                        borderRadius: '29px',
+                        marginBottom: '25px',
+                        position: 'absolute',
+                        letterSpacing: '-0.5px'
+                       }} 
+                      ><ArrowBackIosIcon/>BACK</Typography>
+                    <Typography align='center' sx={{fontSize: '35px',
+    marginBottom: '24px', fontFamily: '"txc-pearl", sans-serif'
+  }}>Core Archetypal Energies for: {formatDate(dob)}</Typography>
 
                      <div className='flex cc'>
                         
@@ -484,7 +497,7 @@ const TarotCalculator: React.FC = () => {
                   
                     </div>
 
-                    <Typography align='center' sx={{marginTop: '32px', marginBottom: '32px', marginLeft: 'auto', marginRight: 'auto', maxWidth: '979px'}}>Following Archetypal energies are also part of your portrait, however you may remain not aware of them until a certain stage of your life:</Typography>
+                    <Typography align='center' sx={{marginTop: '32px', marginBottom: '32px', marginLeft: 'auto', marginRight: 'auto', maxWidth: '649px'}}>Following Archetypal energies are also part of your portrait, however you may remain not aware of them until a certain stage of your life:</Typography>
 
                     <div className='flex cc'>
                         <div className='flex cc vert'>
@@ -542,7 +555,7 @@ const TarotCalculator: React.FC = () => {
                         </div>
   
   
-                        <div className='flex cc vert'>
+                        <div className='flex cc vert mb-24'>
                           <div className={`card ${isFlippedGift ? 'is-flipped' : ''}`} onClick={handleCardClickGift}>
                             <div className="card-face card-front">
                               <img src={mapToTarotCard(gift).image} alt={mapToTarotCard(gift).name} />
@@ -593,16 +606,40 @@ const TarotCalculator: React.FC = () => {
                           {/* <Typography align='center'>Mission</Typography> */}
                           <Typography align='center' variant='h2'>  {mapToTarotCard(mission).name}</Typography>
                         </div>
-  
-                        
-  
-                    
+                      </div>
+                      <div className='flex cc-center'> 
+                      <Button       
+                      variant="outlined"
+                      onClick={() => {setShowArchetypes(false)}}
+                      sx={{
+                        marginTop: '25px', 
+                        // backgroundColor: '#1a2e5c',
+                        width: 'auto',
+                        padding: '11px 32px',
+                        letterSpacing: '1px',
+                        borderRadius: '29px',
+                        marginBottom: '25px',
+                       }} 
+                      >Check another date</Button>
+                      </div>
+                      <div className="flex cc-center">
+                        <Link href='https://instagram.com/myhealingstudio' target='_blank' sx={{fontSize: '32px', color:'navy', padding: '0 12px'}}>
+                          <InstagramIcon />
+                        </Link>
+                        <Link href='https://facebook.com/myhealingstudio' target='_blank' sx={{fontSize: '32px', color:'navy', padding: '0 12px'}}>
+                          <FacebookIcon />
+                        </Link>
+                        <Link href='mailto: alongwitheternity@gmail.com' target='_blank' sx={{fontSize: '32px', color:'navy', padding: '0 12px'}}>
+                          <MailIcon />
+                        </Link>
                       </div>
                     </>
                    
      :
      
      <div className='m-auto flex cc vert'>
+        <Typography align='center' variant='h1' sx={{fontSize: '40px',
+    marginBottom: '24px'}}>Archetypal Calculator</Typography>
      <TextField
        // label="Date of Birth"
        type="date"
@@ -610,9 +647,13 @@ const TarotCalculator: React.FC = () => {
        value={dob}
        onChange={(e) => {
          setDob(e.target.value);
-         // Update the disabled state based on the validation result
          setIsCalculateDisabled(!validateDateFormat(e.target.value));
        }}
+       onKeyDown={(e) => {
+        if (e.key === 'Enter' && !isCalculateDisabled) {
+          calculateTarot();
+        }
+      }}
      />
      <Button
        variant="contained"

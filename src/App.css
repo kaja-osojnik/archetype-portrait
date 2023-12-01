@@ -75,6 +75,11 @@ ul{
   text-align: center;
 }
 
+.mb24{
+  margin-bottom: 24px;
+}
+
+
 .card {
   /* Set the width and height for the card */
   width: 237px;
@@ -92,6 +97,8 @@ ul{
     backface-visibility: hidden;
     transition: transform 0.6s;
   }
+
+
 
   /* Styles for the front face */
   .card-front {

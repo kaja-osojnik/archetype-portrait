@@ -1,6 +1,6 @@
 import TarotCalculator from './components/TarotCalculator';
 import './App.css'
-import {Typography, Box} from '@mui/material';
+import {Box} from '@mui/material';
 import MainBg from '../src/assets/Artboard11.png'
 
 function App() {
@@ -21,8 +21,7 @@ function App() {
     <Box 
       sx={backgroundStyle}
     >
-      <Typography align='center' variant='h1' sx={{fontSize: '40px',
-    marginBottom: '24px'}}>Archetypal Calculator</Typography>
+    
       <TarotCalculator />
     </Box>
   );
