@@ -373,14 +373,15 @@ const TarotCalculator: React.FC = () => {
                         borderRadius: '29px',
                         marginBottom: '25px',
                         position: 'absolute',
-                        letterSpacing: '-0.5px'
+                        letterSpacing: '-0.5px',
+                        display: 'flex'
                        }} 
                       ><ArrowBackIosIcon/>BACK</Typography>
                     <Typography align='center' sx={{fontSize: '35px',
-    marginBottom: '24px', fontFamily: '"txc-pearl", sans-serif'
-  }}>Core Archetypal Energies for: {formatDate(dob)}</Typography>
+    marginBottom: '24px', fontFamily: '"txc-pearl", sans-serif', lineHeight: '1.2'
+  }}>Core Archetypal Energies for:<br></br> {formatDate(dob)}</Typography>
 
-                     <div className='flex cc'>
+                     <div className='flex cc wrap-sm'>
                         
 
 
@@ -499,7 +500,7 @@ const TarotCalculator: React.FC = () => {
 
                     <Typography align='center' sx={{marginTop: '32px', marginBottom: '32px', marginLeft: 'auto', marginRight: 'auto', maxWidth: '649px'}}>Following Archetypal energies are also part of your portrait, however you may remain not aware of them until a certain stage of your life:</Typography>
 
-                    <div className='flex cc'>
+                    <div className='flex cc wrap-sm'>
                         <div className='flex cc vert'>
                           <div className={`card ${isFlippedSocialExam ? 'is-flipped' : ''}`} onClick={handleCardClickIsFlippedSocialExam}>
                             <div className="card-face card-front">

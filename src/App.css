@@ -1,5 +1,6 @@
 body{
   padding: 0;
+  margin: 0;
   background-size: cover;
   justify-content: center;
   background-repeat: no-repeat;
@@ -89,6 +90,8 @@ ul{
   cursor: pointer;
   color: dimgray;
 
+
+
   /* Set styles for both faces of the card */
   .card-face {
     width: 100%;
@@ -99,16 +102,14 @@ ul{
   }
 
 
-
-  /* Styles for the front face */
   .card-front {
     transform: rotateY(0deg);
   }
 
-  /* Styles for the back face */
+
   .card-back {
-    /* Set the back face styles */
-    transform: rotateY(180deg); /* Initially hidden */
+
+    transform: rotateY(180deg);
     background-image: url('../src/assets/cardback.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -126,4 +127,105 @@ ul{
   &.is-flipped .card-back {
     transform: rotateY(0deg);
   }
+}
+
+@media only screen and (max-width: 992px) {
+  .card img{
+    width: 100%;
+    max-width: 237px;
+  }
+
+  .card {
+    /* Set the width and height for the card */
+    width: 100%;
+    height: 267px;
+  }
+
+  .card-back {
+    width: 100%;
+    height: 267px;
+  }
+  .css-7g2ab1-MuiTypography-root{
+    left: 0;
+    top: 11px;
+  }
+
+}
+
+@media only screen and (max-width: 876px) {
+  .wrap-sm{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .flex.cc.vert{
+      width: 50%;
+      margin-bottom: 24px;
+    }
+  }
+
+  .card img{
+    width: 100%;
+    max-width: 184px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+
+  .card {
+    /* Set the width and height for the card */
+    width: 100%;
+    height: 300px;
+  }
+
+  .card-back {
+    width: 100%;
+    height: 300px;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .wrap-sm{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    .flex.cc.vert{
+      width: 160px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .card img{
+    width: 100%;
+    max-width: 152px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+
+  .card {
+    width: 100%;
+    height: 254px;
+  }
+
+  .card-back {
+    width: 100%;
+    height: 247px;
+  }
+
+  h2{
+    font-size: 19px!important;
+  }
+
+  .css-1ifbsdo-MuiTypography-root{
+    line-height: 1.2;
+    padding: 0px 24px;
+  }
+
+  .css-32kc7p-MuiTypography-root{
+    margin-top: 12px!important;
+    font-size: 26px!important;
+  }
+
 }

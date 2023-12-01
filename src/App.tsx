@@ -5,16 +5,15 @@ import MainBg from '../src/assets/Artboard11.png'
 
 function App() {
   const backgroundStyle = {
-    backgroundImage: `url(${MainBg})`, // Specify the URL of the image
-    backgroundSize: 'cover', // Set the background size property
-    backgroundRepeat: 'no-repeat', // Set the background repeat property
-    minHeight: '100vh', // Set the height of the box to fill the viewport
+    backgroundImage: `url(${MainBg})`, 
+    backgroundSize: 'cover', 
+    backgroundRepeat: 'no-repeat', 
+    minHeight: '100vh', 
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     padding: '40px 0'
-    // Add other styles if needed
   };
 
   return (
