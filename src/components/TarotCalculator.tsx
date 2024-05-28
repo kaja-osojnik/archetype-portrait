@@ -302,13 +302,13 @@ const TarotCalculator: React.FC = () => {
   
 
 
-  console.log(mainPersonalityLight)
-  console.log(mainPersonalityShadow)
-  console.log('super skill:' + unconsciousSuperSkill)
-  console.log(lifetimeLessonExam)
-  console.log(socialExam)
-  console.log('gift:' + gift)
-  console.log(mission)
+  // console.log(mainPersonalityLight)
+  // console.log(mainPersonalityShadow)
+  // console.log('super skill:' + unconsciousSuperSkill)
+  // console.log(lifetimeLessonExam)
+  // console.log(socialExam)
+  // console.log('gift:' + gift)
+  // console.log(mission)
 
   
   const mapToTarotCard = (number: number): { name: string; image: string; light: string[]; shadow: string[] } => {
@@ -413,7 +413,7 @@ const TarotCalculator: React.FC = () => {
                             </div>
                           </div>
                         </div>
-                        <Typography align='center'>Personality Light </Typography>
+                        {/* <Typography align='center'>Personality Light </Typography> */}
                         <Typography align='center' variant='h2'>  {mapToTarotCard(mainPersonalityLight).name}</Typography>
                       </div>
 
@@ -441,7 +441,7 @@ const TarotCalculator: React.FC = () => {
                             </div>
                           </div>
                         </div>
-                        <Typography align='center'>Personality Shadow</Typography>
+                        {/* <Typography align='center'>Personality Shadow</Typography> */}
                         <Typography align='center' variant='h2'>  {mapToTarotCard(mainPersonalityShadow).name}</Typography>
                       </div>
 
@@ -468,7 +468,7 @@ const TarotCalculator: React.FC = () => {
                             </div>
                           </div>
                         </div>
-                        <Typography align='center'>Super Skill</Typography>
+                        {/* <Typography align='center'>Super Skill</Typography> */}
                         <Typography align='center' variant='h2'>  {mapToTarotCard(unconsciousSuperSkill).name}</Typography>
                       </div>
 
@@ -494,7 +494,7 @@ const TarotCalculator: React.FC = () => {
                             </div>
                           </div>
                         </div>
-                        <Typography align='center'>Lifetime Lesson</Typography>
+                        {/* <Typography align='center'>Lifetime Lesson</Typography> */}
                         <Typography align='center' variant='h2'>  {mapToTarotCard(lifetimeLessonExam).name}</Typography>
                       </div>
 
